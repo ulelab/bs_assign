@@ -18,10 +18,7 @@ pybedtools=0.8.1
   `prtxn` *is the path to the file containing relevant positions where the motif needs to be in order to be detected, it is an output from another script, PEKA;*  
   `fasta` *is the path to the genome in fasta format;*  
   `fai` *is the path to the genome index file;*  
-  `window` *is the distance around the landmarks within which the motifs are being searched for (30 is the usual value);*  
-            ----------------N--------------- *genomic sequence N represents a genomic landmark, (one base)*  
-                      -------------          *scanned area*  
-                      windowNwindow          *size of the scanned area*  
+  `window` *is the flanking distance in bases around the landmarks (one base) within which the motifs are being searched for (30 is the usual value);*  
   `len` *is the length of the motifs (4-7 is the usual range);*  
   `cores` *is the number of threads used in the process;*  
   `chunk_size` *is the number of landmarks used in one thread (10000 is the usual value);*  
