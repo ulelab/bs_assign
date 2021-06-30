@@ -1,15 +1,15 @@
-# bs_assign
+## bs_assign
 Author: aram.amalietti@gmail.com
 
 
-##Dependencies (these are the versions the script was developped with, most likely newer version will work but if they don't fall back on these):
+**Dependencies** (these are the versions the script was developped with, most likely newer version will work but if they don't fall back on these):
 ```
 python=3.7  
 pandas=1.2.3  
 numpy=1.19.2  
 pybedtools=0.8.1  
 ```
-##Usage:  
+**Usage**:  
   ```
   python3 <path_to_script> <xl_in> <motif1,motif2,...motifn> <prtxn> <fasta> <fai> <window> <len> <cores> <chunk_size> <output_dir> <consensus>  
   ```
@@ -25,7 +25,7 @@ pybedtools=0.8.1
   output_dir is the directory where the results will be saved (make sure it exists)
   consensus is a meta motif representing the motif group and will be used in output file names  
   
-##Outputs:
+**Outputs**:
 
  BED files representing the binding sites found within the given window around the given landmarks, binding sites are basically found motif merged.  
  there are two merging distances and two corresponding files, one is merged0<file_name> representing merging distance 0 and the other merged30 for 30
