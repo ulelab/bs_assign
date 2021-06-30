@@ -5,14 +5,10 @@ import itertools
 from multiprocessing import  Pool
 from iteration_utilities import deepflatten
 
+
 def get_name(s_file):
     """Return sample name from file path."""
     return s_file.split('/')[-1].replace('.bed', "").replace('.xl', "").replace('threshold_crosslinks_',"")
-
-
-# def sanitize_input(df):
-#     df['prtxn'].fillna(df['mtxn'], inplace=True)
-#     return df
 
 
 def parse_bed6_to_df(p_file):
@@ -58,9 +54,7 @@ def find_motif(m, sequences, df, df_input, window, shift):
             try:
                 m_prtxn = [df_input.loc[m, 'mtxn']]
             except KeyError:
-                m_prtxn = []
-            
-            #print(f'WARNING {m} not in input file')
+                m_prtxn = []        
     m_on_pos = []
     if df_input is not None:
         for pos in m_pos:
@@ -159,7 +153,6 @@ def run_bs(kmer_group_T, xn_file, tsv_file, genome, genome_fai, window, k_length
         df_input = pd.read_csv(tsv_file, sep='\t').set_index('Unnamed: 0')
     else:
         df_input = None
-    #df_input = sanitize_input(df_input)
     shift = int((k_length + 1) / 2)
     n = len(df) // chunk_size + 1
     sites_chunks = np.array_split(df, n)
@@ -184,10 +177,6 @@ def run_bs(kmer_group_T, xn_file, tsv_file, genome, genome_fai, window, k_length
     input_name = get_name(xn_file)
     df_out = df_out[df_out.start > 1]
     print(f'df {input_name}_{file_name} done')
-   # if output_dir:
-    #    df_out.to_csv(f'{output_dir}/{input_name}_{file_name}.bed', sep='\t', header=None, index=None)
-    #else:
-     #   df_out.to_csv(f'{input_name}_{file_name}.bed', sep='\t', header=None, index=None)
     print(f'df {input_name}_{file_name} saved')
     bed_out = pbt.BedTool.from_dataframe(df_out)
     bed_out_30 = merge_peaks(bed_out, max_merge_dist)
@@ -208,7 +197,6 @@ if __name__ == "__main__":
     import time
     import sys
     
-    start = time.time()
     print(sys.argv[1])
     motif_group = sys.argv[1].split(',')
     print(motif_group)
@@ -249,13 +237,3 @@ if __name__ == "__main__":
     )
 
     
-    # run(
-    #     ["GUAUG", "UUUGU"],
-    #     "/home/aram/ipynb_scripts/used_scripts/xl_wMotifs.bed",
-    #     "/home/aram/ipynb_scripts/db/results/HepG2-FUBP3_xl_liftoverto_hg19_5mer_distribution_whole_gene.tsv",
-    #     '/home/aram/genomes/GRCh37.primary_assembly.genome.fa', 
-    #     '/home/aram/genomes/GRCh37.primary_assembly.genome.fa.fai', 
-    #     30, 
-    #     5,
-    #     n_cores=1,
-    #     chunk_size=100000)
