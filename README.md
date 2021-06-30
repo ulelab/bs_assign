@@ -21,7 +21,7 @@ pybedtools=0.8.1
   `window` *is the flanking distance in bases around the landmarks (one base) within which the motifs are being searched for (30 is the usual value);*  
   `len` *is the length of the motifs (4-7 is the usual range);*  
   `cores` *is the number of threads used in the process;*  
-  `chunk_size` *is the number of landmarks used in one thread (10000 is the usual value);*  
+  `chunk_size` *is the number of rows per thread (10000 is the usual value);*  
   `output_dir` *is the directory where the results will be saved (make sure it exists);*  
   `consensus` *is a meta motif representing the motif group and will be used in output file names;*  
   
