@@ -27,7 +27,7 @@ pybedtools=0.8.1
   
 **Outputs**:
 
- BED files representing the binding sites found within the given window around the given landmarks, binding sites are basically found motif merged.  
+ BED files representing the binding sites found within the given window around the given landmarks, binding sites are basically found motifs merged.  
  There are two merging distances and two corresponding files, one is merged0<file_name> representing merging distance 0 and the other merged30 for 30.
   
   
