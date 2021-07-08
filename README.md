@@ -8,13 +8,14 @@ python=3.7
 pandas=1.2.3  
 numpy=1.19.2  
 pybedtools=0.8.1  
+iteration_utilities=0.11.0  
 ```
 **Usage**:  
   ```
-  python3 <path_to_script> <xl_in> <motif1,motif2,...motifn> <prtxn> <fasta> <fai> <window> <len> <cores> <chunk_size> <output_dir> <consensus>  
-  ```
-  `xl_in` *is a BED file with landmarks around which the motifs are being searched for;*  
-  `motif1,motif2,...motifn` *is the group of motifs that is searched for around the landmarks, for example AAAA,CCCC,GGGG;*  
+  python3 <path_to_script> <motif1,motif2,...motifn> <xl_in> <prtxn> <fasta> <fai> <window> <len> <cores> <chunk_size> <output_dir> <consensus>  
+  ```  
+  `motif1,motif2,...motifn` *is the group of motifs that is searched for around the landmarks, for example AAAA,CCCC,GGGG;* 
+  `xl_in` *is a BED file with landmarks around which the motifs are being searched for;*   
   `prtxn` *is the path to the file containing relevant positions where the motif needs to be in order to be detected, it is an output from another script, PEKA;*  
   `fasta` *is the path to the genome in fasta format;*  
   `fai` *is the path to the genome index file;*  
@@ -33,4 +34,6 @@ pybedtools=0.8.1
   
   
   
+
+
 

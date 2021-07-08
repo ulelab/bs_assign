@@ -194,12 +194,9 @@ def run_bs(kmer_group_T, xn_file, tsv_file, genome, genome_fai, window, k_length
 
 if __name__ == "__main__":
 
-    import time
     import sys
     
-    print(sys.argv[1])
     motif_group = sys.argv[1].split(',')
-    print(motif_group)
     xl_in = sys.argv[2]
     if len(sys.argv) == 11:
         prtxn_file = None
@@ -210,6 +207,7 @@ if __name__ == "__main__":
         num_cores = int(sys.argv[7])
         chunk_size = int(sys.argv[8])
         output_dir = sys.argv[9]
+        consensus = sys.argv[11]
     if len(sys.argv) == 12:
         prtxn_file = sys.argv[3]
         fasta = sys.argv[4]
@@ -230,10 +228,10 @@ if __name__ == "__main__":
         fai,
         window,
         kmer_len,
-        n_cores=num_cores,
-        chunk_size=chunk_size,
-        output_dir=output_dir,
-        consensus=consensus
+        num_cores,
+        chunk_size,
+        output_dir,
+        consensus
     )
 
     
