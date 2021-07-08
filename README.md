@@ -2,7 +2,7 @@
 Author: aram.amalietti@gmail.com
 
 
-**Dependencies** (these are the versions the script was developped with, newer versions should work, but if they don't, please use these versions):
+**Dependencies** (these are the versions the script was developed with, newer versions should work, but if they don't, please use these versions):
 ```
 python=3.7  
 pandas=1.2.3  
@@ -28,7 +28,7 @@ iteration_utilities=0.11.0
   
 **Outputs**:
 
- BED files representing the binding sites found within the given window around the given landmarks, binding sites are basically found motif merged.  
+ BED files representing the binding sites found within the given window around the given landmarks, binding sites are basically found motifs merged.  
  There are two merging distances and two corresponding files, one is merged0<file_name> representing merging distance 0 and the other merged30 for 30.
   
   
