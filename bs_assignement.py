@@ -206,7 +206,7 @@ if __name__ == "__main__":
         num_cores = int(sys.argv[7])
         chunk_size = int(sys.argv[8])
         output_dir = sys.argv[9]
-        consensus = sys.argv[11]
+        consensus = sys.argv[10]
     if len(sys.argv) == 12:
         prtxn_file = sys.argv[3]
         fasta = sys.argv[4]
