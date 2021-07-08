@@ -42,7 +42,6 @@ def find_all(string,substring):
 def find_motif(m, sequences, df, df_input, window, shift):
     m_pos_offshift = [find_all(x, m) for x in sequences]
     m_pos = [[x + shift - window for x in y] for y in m_pos_offshift]
-    missing_motifs = []
     if df_input is not None:
         try:
             m_prtxn_str = df_input.loc[m, 'prtxn']
@@ -228,10 +227,10 @@ if __name__ == "__main__":
         fai,
         window,
         kmer_len,
-        num_cores,
-        chunk_size,
-        output_dir,
-        consensus
+        n_cores=num_cores,
+        chunk_size=chunk_size,
+        output_dir=output_dir,
+        consensus=consensus
     )
 
     
