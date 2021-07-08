@@ -26,7 +26,7 @@ iteration_utilities=0.11.0
   `output_dir` *is the directory where the results will be saved (make sure it exists);*  
   `consensus` *is a meta motif representing the motif group and will be used in output file names;*  
 
-  Optionally this script can be ran without prtxn file and in that case it will use all the motifs found around crosslinks instead of only those defined in prtxn file.
+  Optionally this script can be ran without prtxn file and in that case it will use all the motifs found around crosslinks instead of only those on positions defined in prtxn file.
   
 **Outputs**:
 
