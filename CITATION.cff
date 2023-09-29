@@ -1,0 +1,11 @@
+cff-version: 0.0.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Amalietti"
+  given-names: "Aram Gustav"
+  orcid: "https://orcid.org/0000-0002-9101-6918"
+title: "bs_assign"
+version: 0.0.0
+doi: 10.5281/zenodo.8388764
+date-released: 2021-06-30
+url: "https://github.com/ulelab/bs_assign"
