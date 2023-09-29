@@ -1,6 +1,8 @@
 ## bs_assign
 Author: aram.amalietti@gmail.com
 
+[![DOI](https://zenodo.org/badge/381635264.svg)](https://zenodo.org/badge/latestdoi/381635264)
+
 
 **Dependencies** (these are the versions the script was developed with, newer versions should work, but if they don't, please use these versions):
 ```
